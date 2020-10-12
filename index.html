@@ -3,41 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <title>Todo</title>
+    <link href="Styles/style.css" rel="stylesheet">
 </head>
 <body>
 <div class="todo_app">
     <header class="todo_header">
-        <h1 class="title">todos</h1>
+        <h1 class="title">Todos</h1>
     </header>
     <div class="todo_body">
         <section class="todo_search">
-            <i>What needs to be done?</i>
+            <div class="main_select_all_button">
+                <button class="main_select_all"></button>
+            </div>
+            <div class="main_add_new">
+                <input type="text" class="main_add_new_input" placeholder="What needs to be done?" autofocus />
+            </div>
         </section>
         <section class="todo_tasks">
-            <ul>
-                <li class="task">
-                    HTML
+            <ul class="todo_tasks list_tasks">
+                <li class="todo_tasks list_tasks_item">
+                    <div class="todo_tasks_view">
+                        <input type="checkbox" class="tasks_item_status"/>
+                        <span class="tasks_item_text">HTML</span>
+                        <button class="tasks_item_delete">Delete task</button>
+                    </div>
                 </li>
-                <li class="task">
-                    CSS
+                <li class="todo_tasks list_tasks_item">
+                    <div class="todo_tasks_view">
+                        <input type="checkbox" class="tasks_item_status"/>
+                        <span class="tasks_item_text">CSS</span>
+                        <button class="tasks_item_delete">Delete task</button>
+                    </div>
                 </li>
-                <li class="task">
-                    JS
+                <li class="todo_tasks list_tasks_item">
+                    <div class="todo_tasks_view">
+                        <input type="checkbox" class="tasks_item_status"/>
+                        <span class="tasks_item_text">JS</span>
+                        <button class="tasks_item_delete">Delete task</button>
+                    </div>
                 </li>
-                <li class="task">
-                    JS tools
+                <li class="todo_tasks list_tasks_item">
+                    <div class="todo_tasks_view">
+                        <input type="checkbox" class="tasks_item_status"/>
+                        <span class="tasks_item_text">JS tools</span>
+                        <button class="tasks_item_delete">Delete task</button>
+                    </div>
                 </li>
             </ul>
         </section>
     </div>
-    <footer class="todo_control_panel">
-        <span class="items_counter">3 items left</span>
-        <div class="buttons">
-            <button type="button" name="All">All</button>
-            <button type="button" name="Active">Active</button>
-            <button type="button" name="Completed">Completed</button>
+    <footer class="todo_actions_bar">
+        <div class="actions_bar">
+            <span class="items_counter">3 items left</span>
         </div>
-        <button type="button" name="Clear">Clear completed</button>
+        <div class="actions_bar">
+            <div class="task_filter" role="group">
+                <label class="task_filter_item">
+                    <input type="radio" class="task_filter_item_input" value="Active" />
+                    <span class="task_filter_item_text">All</span>
+                </label>
+                <label class="task_filter_item">
+                    <input type="radio" class="task_filter_item_input" value="Active" />
+                    <span class="task_filter_item_text">Active</span>
+                </label>
+                <label class="task_filter_item">
+                    <input type="radio" class="task_filter_item_input" value="Active" />
+                    <span class="task_filter_item_text">Completed</span>
+                </label>
+            </div>
+        </div>
+        <div class="actions_bar">
+            <button class="actions_bar_completed">Clear completed</button>
+        </div>
     </footer>
 </div>
 </body>
