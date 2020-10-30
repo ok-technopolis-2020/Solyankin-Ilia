@@ -1,0 +1,155 @@
+body {
+    background-color: #F2F2F2;
+    width: 562px;
+    margin: 0 auto;
+}
+
+header {
+    font-family: Roboto, sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 21px;
+    color: #CCCCCC;
+    width: 562px;
+    text-align: center;
+}
+
+.todo_body{
+    background-color: #ffffff;
+    width: 562px;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+.todo_search {
+    display: flex;
+    width: 562px;
+    height: 66px;
+    border-bottom: 1px solid #E6E6E6;
+    align-items: center;
+}
+.main_select_all {
+    width: 62px;
+    height: 66px;
+    background: url("../images/select-all.png") no-repeat center;
+    border: none;
+    color: #FFFFFF;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+.main_add_new_input {
+    width: 496px;
+    height: 60px;
+    border: none;
+    padding: 0;
+}
+
+.main_add_new_input::placeholder{
+    font-style: italic;
+    color: #b6b6b6;
+}
+
+input[type="text"] {
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 21px;
+    color: #616161;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+li:hover{
+    background-color: #FAFAFA;
+}
+
+.todo_tasks_view {
+    display: flex;
+    width: 562px;
+    height: 64px;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 21px;
+    color: #616161;
+    align-items: center;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+.tasks_item_status {
+    height: 66px;
+}
+
+input[type="checkbox"]{
+    margin: 11px;
+}
+
+.tasks_item_status:checked + span {
+    color: #CCCCCC;
+    text-decoration: line-through;
+}
+
+.tasks_item_text {
+    width: 100%;
+}
+
+.tasks_item_delete {
+    width: 62px;
+    height: 100%;
+    border: none;
+    background: url("../images/close.png") no-repeat center;
+    opacity: 0;
+}
+
+li:hover .tasks_item_delete {
+    opacity: 1;
+}
+
+footer {
+    height: 53px;
+    display: flex;
+    align-items: center;
+
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+
+    color: #888888;
+}
+
+.items_counter{
+    margin-left: 12px;
+    margin-right: 100px;
+}
+
+.task_filter{
+    display: inline-block;
+}
+
+.task_filter input[type="radio"] {
+
+}
+
+.actions_bar_completed {
+    margin-left: 60px;
+    border: none;
+    background-color: #FFFFFF;
+
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    color: #888888;
+
+    display: flex;
+    align-items: center;
+
+}
+
+
