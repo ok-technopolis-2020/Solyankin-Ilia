@@ -31,17 +31,40 @@ ul {
 
 /* ------Containers------ */
 .todo_app {
-      display: flex;
-      flex-direction: column;
-      margin: auto;
-      max-width: 562px;
-      min-width: 460px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 562px;
+    min-width: 460px;
+    position: relative;
 }
 
 .todo_body{
     background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     clear: both;
+}
+
+.todo_app:before {
+    left: 2px;
+    right: 2px;
+    height: 5px;
+    z-index: -1;
+}
+
+.todo_app:after {
+    left: 4px;
+    right: 4px;
+    height: 10px;
+    z-index: -2;
+}
+
+.todo_app:before, .todo_app:after {
+    background-color: #ffffff;
+    content: '';
+    position: absolute;
+    top: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* ------End--Containers------ */
@@ -62,9 +85,21 @@ ul {
     min-width: 58px;
     min-height: 66px;
     text-indent: -9999px;
-    background: url("../images/select-all.png") no-repeat center;
+    background-size: 28px 16px;
+    background: #FFFFFF url("../images/select-all.png") no-repeat center;
+    width: 62px;
     border: none;
 }
+
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .main_select_all_button {
+        background-size: 28px 16px;
+        background: #FFFFFF url(../images/select-all@2x.png) no-repeat center;
+    }
+}
+
 
 .main_add_new {
     display: flow-root;
@@ -94,8 +129,8 @@ ul {
     min-height: 253px;
 }
 
-.todo_tasks_item {
-    border-bottom: 1px solid #E6E6E6;
+.todo_tasks_item  + .todo_tasks_item{
+    border-top: 1px solid #E6E6E6;
     clear: both;
 }
 
@@ -130,6 +165,15 @@ ul {
     border-color: #08c200;
 }
 
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .task__checkbox:checked + .task__status-icon {
+        background-size: 20px 20px;
+        background: url(../images/completed@2x.png) no-repeat center;
+    }
+}
+
 .tasks_item_status:checked + span {
     color: #CCCCCC;
     text-decoration: line-through;
@@ -151,7 +195,17 @@ ul {
     text-indent: -9999px;
     border: none;
     background: url("../images/close.png") no-repeat center;
+    background-size: 20px 20px;
     margin: -9999px 4px 0 12px;
+}
+
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .task__button {
+        background-size: 20px 20px;
+        background: url(../images/close@2x.png) no-repeat center;
+    }
 }
 
 .todo_tasks_view:hover .tasks_item_delete {
@@ -204,10 +258,15 @@ ul {
     cursor: pointer;
     padding: 2px 6px;
     border: solid transparent 1px;
+    border-radius: 3px;
 }
 
 .task_filter_item_input:checked + .task_filter_item_text {
-    border-color: #979592;
+    border: 1px solid #EBDFDF;
+}
+
+.task_filter_item_input:focus + .task_filter_item_text  {
+    text-decoration: underline;
 }
 
 .actions_bar_completed {
