@@ -51,11 +51,6 @@
     }
 }
 
-.tasks_item_status:checked + span {
-    color: var(--title-text-color);
-    text-decoration: line-through;
-}
-
 .tasks_item_text {
     display: flex;
     flex-grow: 1;
@@ -64,6 +59,11 @@
     padding: 12px 0;
     border: 0;
     background: none;
+
+    .tasks_item_status:checked + & {
+        color: var(--title-text-color);
+        text-decoration: line-through;
+    }
 }
 
 .tasks_item_delete {
@@ -74,6 +74,10 @@
     background: url("../images/close.png") no-repeat center;
     background-size: 18px 18px;
     margin: -9999px 4px 0 12px;
+
+    .todo_tasks_view:hover & {
+        margin-top: 0;
+    }
 }
 
 @media
@@ -89,6 +93,4 @@
      margin-top: 0;
  }
 
-.todo_tasks_view:hover .tasks_item_delete {
-    margin-top: 0;
-}
+

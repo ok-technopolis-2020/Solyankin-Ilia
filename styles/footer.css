@@ -37,14 +37,14 @@
     padding: 2px 6px;
     border: solid transparent 1px;
     border-radius: 3px;
-}
 
-.task_filter_item_input:checked + .task_filter_item_text {
-    border: 1px solid var(--task-filter-border-color);
-}
+    .task_filter_item_input:checked + & {
+        border: 1px solid var(--task-filter-border-color);
+    }
 
-.task_filter_item_input:focus + .task_filter_item_text {
-    text-decoration: underline;
+    .task_filter_item_input:focus + & {
+        text-decoration: underline;
+    }
 }
 
 .actions_bar_completed {

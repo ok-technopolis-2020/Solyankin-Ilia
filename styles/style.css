@@ -1,9 +1,9 @@
-@import "colors.css";
-@import "header.css";
-@import "main-containers.css";
-@import "search.css";
-@import "main-tasks.css";
-@import "footer.css";
+@import "./colors.css";
+@import "./header.css";
+@import "./main-containers.css";
+@import "./search.css";
+@import "./main-tasks.css";
+@import "./footer.css";
 
 body,
 div,
