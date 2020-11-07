@@ -1,0 +1,39 @@
+@import "colors.css";
+
+.todo_app {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 562px;
+    min-width: 460px;
+    position: relative;
+}
+
+.todo_body {
+    background-color: var(--main-body-background-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    clear: both;
+}
+
+.todo_app::before {
+    left: 2px;
+    right: 2px;
+    height: 5px;
+    z-index: -1;
+}
+
+.todo_app::after {
+    left: 4px;
+    right: 4px;
+    height: 10px;
+    z-index: -2;
+}
+
+.todo_app::before,
+.todo_app::after {
+    background-color: var(--main-body-background-color);
+    content: '';
+    position: absolute;
+    top: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

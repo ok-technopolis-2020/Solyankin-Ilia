@@ -1,0 +1,11 @@
+@import "colors.css";
+
+.todo_header {
+    text-align: center;
+    color: var(--title-text-color);
+}
+
+.title {
+    font-size: 100px;
+    font-weight: 200;
+}

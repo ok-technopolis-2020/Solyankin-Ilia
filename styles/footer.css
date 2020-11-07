@@ -1,0 +1,57 @@
+@import "colors.css";
+
+.todo_actions_bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 12px;
+    align-items: center;
+    font-size: 14px;
+    color: var(--action-bar-text-color);
+    border-top: 1px solid var(--task-item-border-color);
+}
+
+.items_counter {
+    display: inline-block;
+    background: none;
+    word-break: break-word;
+}
+
+.task_filter {
+    display: inline-block;
+}
+
+.task_filter_item {
+    display: inline-block;
+    border: none;
+    background: none;
+    margin-right: 5px;
+}
+
+.task_filter_item_input {
+    position: absolute;
+    left: -9999px;
+}
+
+.task_filter_item_text {
+    cursor: pointer;
+    padding: 2px 6px;
+    border: solid transparent 1px;
+    border-radius: 3px;
+
+    .task_filter_item_input:checked + & {
+        border: 1px solid var(--task-filter-border-color);
+    }
+
+    .task_filter_item_input:focus + & {
+        text-decoration: underline;
+    }
+}
+
+.actions_bar_completed {
+    border: none;
+    background: none;
+    font-size: 14px;
+    color: var(--action-bar-text-color);
+    display: inline-block;
+    padding: 8px 0;
+}

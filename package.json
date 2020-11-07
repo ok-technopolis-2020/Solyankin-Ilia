@@ -1,0 +1,27 @@
+{
+  "name": "task_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ok-technopolis-2020/Solyankin-Ilia.git"
+  },
+  "author": "Solyankin Ilia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ok-technopolis-2020/Solyankin-Ilia/issues"
+  },
+  "homepage": "https://github.com/ok-technopolis-2020/Solyankin-Ilia#readme",
+  "devDependencies": {
+    "postcss-nested": "^4.2.3",
+    "stylelint": "^13.7.2",
+    "stylelint-config-standard": "^20.0.0"
+  },
+  "dependencies": {
+    "colors.css": "^3.0.0"
+  }
+}

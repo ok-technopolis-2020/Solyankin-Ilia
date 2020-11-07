@@ -1,0 +1,50 @@
+@import "colors.css";
+
+.todo_search {
+    width: 562px;
+    border-bottom: 1px solid var(--task-item-border-color);
+    background-color: var(--main-body-background-color);
+}
+
+.main_select_all {
+    float: left;
+}
+
+.main_select_all_button {
+    display: inline-block;
+    min-width: 58px;
+    min-height: 66px;
+    text-indent: -9999px;
+    background: var(--main-body-background-color) url("../images/select-all.png") no-repeat center;
+    background-size: 24px 12px;
+    width: 62px;
+    border: none;
+}
+
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .main_select_all_button {
+        background: var(--main-body-background-color) url(../images/select-all@2x.png) no-repeat center;
+        background-size: 24px 12px;
+    }
+}
+
+.main_add_new {
+    display: flow-root;
+}
+
+.main_add_new_input {
+    min-height: 66px;
+    width: 100%;
+    border: none;
+    background: none;
+    font-family: Roboto, sans-serif;
+    font-size: 24px;
+    color: var(--main-text-color);
+}
+
+.main_add_new_input::placeholder {
+    font-style: italic;
+    color: var(--background-text-color);
+}
